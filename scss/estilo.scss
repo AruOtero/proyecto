@@ -1,0 +1,249 @@
+@import "var";
+@import "header";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    background-color: $colorbg;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 0.3fr 2fr 0.2fr;
+    gap:10px;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+
+
+
+
+.main{
+    grid-area: main;
+    border: solid black 3px;
+    height: auto;
+    width: auto;
+}
+
+.cuerpo{
+    display: block;
+    padding: 1px;
+    margin: 1px;
+    line-height: 1.5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    font-size: 25px;
+    text-align: center;
+    height: auto;
+    width: auto;
+    
+}
+
+.aside{
+    grid-area: aside;
+    border: solid black 3px;
+    line-height: 1.5;
+    text-align: center;
+    box-sizing: border-box; 
+    height: auto;
+    width: auto;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #000000; 
+    color: #ffffff;
+    
+}
+
+h2{
+    text-align: center;
+}
+
+.misservicios{
+    background-color:$colorbg;
+    border: black solid 3px;
+    padding: 10px;
+    flex-flow: column; 
+}
+
+.servicios{
+    height: auto;
+    padding: 50px   ;
+}
+
+.servicios1{
+    height: auto;
+    padding: 50px;
+}
+.servicios2{
+    height: auto;
+    padding: 50px;
+}
+.servicios3{
+    height: auto;
+    padding: 50px;
+}
+.servicios4{
+    height: auto;
+    padding: 50px;
+}
+.servicios5{
+    text-align: center;
+    height: auto;
+    padding: 50px;
+}
+.servicios6{
+    text-align: center;
+    height: auto;
+    padding: 50px;
+}
+.servicios7{
+    text-align: center;
+    height: auto;
+    padding: 50px;
+}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:200px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	resize:none;
+	display:block;
+}
+
+.tips{
+    text-align: center      ;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+@media only screen and (max-width: 600px){
+    
+   .contenedor {  display: grid;
+        grid-template-columns: 0fr 0.3fr 1.2fr;
+        grid-template-rows: 0.5fr 0.5fr 1.6fr 0.4fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          ". header aside"
+          ". header aside"
+          ". main main"
+          ". footer footer";
+      }
+      
+      .header { grid-area: header;
+            height: auto;
+            width: auto; 
+            flex-direction: column;
+            justify-self: center;
+
+     }
+    
+      
+      .main { grid-area: main; 
+        height: auto;
+        width: auto;
+        flex-direction: column; }
+      
+      .aside { grid-area: aside; 
+        height: auto;
+        width: auto; 
+        flex-direction: column;}
+      
+      .footer { 
+            grid-area: footer;
+            height: auto;
+            width: auto; 
+            flex-direction: column;
+             }
+
+      .nav {
+             margin: 5px;
+             padding: 1px;
+             box-sizing: border-box;
+             align-items: center;
+            justify-content: center;
+             height: auto;
+            width: auto;
+            flex-direction: column;
+            
+                
+                }
+            .nav ul{
+                font-family: 'Ubuntu', sans-serif;
+                list-style-type: none;
+                display:flex;
+                line-height: 2.5;
+                font-size: 2rem;
+                flex-direction: column;
+                
+            }
+            
+            .nav ul a{
+                text-decoration: none;
+                font-size: 40px;
+                color: white;
+                padding: 0.7rem;
+            
+            }
+            
+            .nav ul a:hover{
+                background-color: black;
+                color: gray;
+                border-radius: 20px;
+            }   
+
+      
+
+}
