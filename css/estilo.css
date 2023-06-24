@@ -53,6 +53,7 @@
 .contenedor {
   background-color: #857d7d;
   margin: 10px auto;
+  flex: wrap;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 0.3fr 2fr 0.2fr;
@@ -63,7 +64,10 @@
   grid-area: main;
   border: solid black 3px;
   height: auto;
-  width: auto; }
+  width: auto;
+  flex: wrap;
+  flex-direction: column;
+  min-width: 250px; }
 
 .cuerpo {
   display: block;
@@ -75,7 +79,10 @@
   font-size: 25px;
   text-align: center;
   height: auto;
-  width: auto; }
+  width: auto;
+  flex: wrap;
+  flex-direction: column;
+  min-width: 250px; }
 
 .aside {
   grid-area: aside;
@@ -84,12 +91,21 @@
   text-align: center;
   box-sizing: border-box;
   height: auto;
-  width: auto; }
+  width: auto;
+  flex: wrap;
+  flex-direction: column;
+  min-width: 250px; }
 
 .footer {
   grid-area: footer;
-  background-color: #000000;
-  color: #ffffff; }
+  background-color: #857d7d;
+  color: #ffffff;
+  flex: wrap;
+  min-width: 250px; }
+
+.iconos {
+  height: 5px;
+  width: 10px; }
 
 h2 {
   text-align: center; }
@@ -196,14 +212,19 @@ textarea {
   .header {
     grid-area: header;
     height: auto;
-    width: auto;
+    width: 100%;
     flex-direction: column;
-    justify-self: center; }
+    justify-self: center;
+    box-shadow: 0px 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   .main {
     grid-area: main;
     height: auto;
     width: auto;
-    flex-direction: column; }
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   .aside {
     grid-area: aside;
     height: auto;

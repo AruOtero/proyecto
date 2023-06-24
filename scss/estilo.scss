@@ -10,6 +10,7 @@
 .contenedor{
     background-color: $colorbg;
     margin: 10px auto;
+    flex: wrap;
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: 0.3fr 2fr 0.2fr;
@@ -19,16 +20,14 @@
     "main aside"
     "footer footer";
 }
-
-
-
-
-
 .main{
     grid-area: main;
     border: solid black 3px;
     height: auto;
     width: auto;
+    flex: wrap;
+    flex-direction: column;
+    min-width: 250px;
 }
 
 .cuerpo{
@@ -42,6 +41,10 @@
     text-align: center;
     height: auto;
     width: auto;
+    flex: wrap;
+    flex-direction: column;
+    min-width: 250px;
+    
     
 }
 
@@ -53,13 +56,24 @@
     box-sizing: border-box; 
     height: auto;
     width: auto;
+    flex: wrap;
+    flex-direction: column;
+    min-width: 250px;
 }
 
 .footer{
     grid-area: footer;
-    background-color: #000000; 
+    background-color: $colorbg;
     color: #ffffff;
+    flex: wrap;
+    min-width: 250px;
     
+}
+
+.iconos{
+    height: 5px;
+    width: 10px;
+
 }
 
 h2{
@@ -180,11 +194,6 @@ textarea{
           ". header aside"
           ". main main"
           ". footer footer";
-        display: grid;
-        grid-template-columns: repeat(
-            auto-fit,
-            minmax(150px, 1fr)
-        );
       }
       
       .header { grid-area: header;
