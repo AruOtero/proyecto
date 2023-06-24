@@ -180,13 +180,24 @@ textarea{
           ". header aside"
           ". main main"
           ". footer footer";
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
       }
       
       .header { grid-area: header;
             height: auto;
-            width: auto; 
+            width: 100%; 
             flex-direction: column;
             justify-self: center;
+            box-shadow: 0px 0px 30px;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(150px, 1fr)
+            );
 
      }
     
@@ -194,7 +205,12 @@ textarea{
       .main { grid-area: main; 
         height: auto;
         width: auto;
-        flex-direction: column; }
+        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        ); }
       
       .aside { grid-area: aside; 
         height: auto;
@@ -209,17 +225,17 @@ textarea{
              }
 
       .nav {
-             margin: 5px;
-             padding: 1px;
-             box-sizing: border-box;
-             align-items: center;
+            margin: 5px;
+            padding: 1px;
+            box-sizing: border-box;
+            align-items: center;
             justify-content: center;
-             height: auto;
+            height: auto;
             width: auto;
             flex-direction: column;
             
                 
-                }
+            }
             .nav ul{
                 font-family: 'Ubuntu', sans-serif;
                 list-style-type: none;
